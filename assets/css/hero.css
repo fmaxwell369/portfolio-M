@@ -1,0 +1,523 @@
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-top:150px;
+
+}
+
+
+
+.hero-container{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    align-items:center;
+
+    gap:120px;
+
+}
+
+
+
+/* BADGE */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:8px 18px;
+
+    margin-bottom:25px;
+
+    border-radius:var(--radius-xl);
+
+    background:#FFF7ED;
+
+    border:1px solid #FED7AA;
+
+    color:var(--primary);
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+
+
+/* TITLE */
+
+.hero-content h1{
+
+    max-width:700px;
+
+    font-size:clamp(2.8rem,5vw,4.5rem);
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.hero-content h1 span{
+
+    color:var(--primary);
+
+}
+
+
+
+/* TEXT */
+
+.hero-content p{
+
+    max-width:600px;
+
+    font-size:1.1rem;
+
+    color:var(--text);
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* BUTTONS */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+/* IMAGE */
+
+.hero-image{
+
+    position:relative;
+
+    width:550px;
+
+    height:550px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.hero-image img{
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    z-index:2;
+
+    position:relative;
+
+    border:8px solid white;
+
+    box-shadow:var(--shadow-lg);
+
+    animation:floatImage 5s ease-in-out infinite;
+
+}
+@keyframes floatImage{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(.95);
+
+        opacity:.6;
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(.95);
+
+        opacity:.6;
+
+    }
+
+}
+@keyframes rotateCircle{
+
+    from{
+
+        transform:rotate(0);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes floatBadge{
+
+    0%{
+
+        margin-top:0;
+
+    }
+
+    50%{
+
+        margin-top:-15px;
+
+    }
+
+    100%{
+
+        margin-top:0;
+
+    }
+
+}
+.hero-stats{
+
+    display:flex;
+
+    gap:40px;
+
+    margin-top:50px;
+
+}
+
+
+.stat{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.stat strong{
+
+    font-family:var(--font-title);
+
+    font-size:2rem;
+
+    color:var(--title);
+
+}
+
+
+.stat span{
+
+    color:var(--text);
+
+    font-size:.9rem;
+
+}
+
+
+/* ===========================
+    TECHNOLOGY LOGOS
+=========================== */
+
+
+.tech-badge{
+
+    position:absolute;
+
+    z-index:3;
+
+    width:65px;
+
+    height:65px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:var(--shadow-md);
+
+    animation:floatBadge 4s ease-in-out infinite;
+
+}
+
+
+.tech-badge:hover{
+
+    transform:translateY(-8px) scale(1.15);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+.tech-badge i{
+
+    pointer-events:none;
+
+}
+
+
+/* LOGO COLORS */
+
+
+.badge-js i{
+
+    color:#F7DF1E;
+
+}
+
+
+.badge-react i{
+
+    color:#61DAFB;
+
+}
+
+
+.badge-node i{
+
+    color:#339933;
+
+}
+
+
+.badge-figma i{
+
+    color:#F24E1E;
+
+}
+.badge-mongo i{
+
+    color:#47A248;
+
+}
+
+.badge-mongo span{
+
+    font-size:1.8rem;
+
+}
+/* ===========================
+    TECHNOLOGY ORBIT
+=========================== */
+
+
+.tech-orbit{
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%, -50%);
+
+    border-radius:50%;
+
+    animation:orbit 25s linear infinite;
+
+}
+
+
+/* CERCLE INVISIBLE */
+
+.tech-badge{
+
+    position:absolute;
+
+    width:65px;
+
+    height:65px;
+
+    background:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:var(--shadow-md);
+
+    font-size:2rem;
+
+    animation:counterRotate 25s linear infinite;
+
+}
+
+
+
+/* POSITION DES LOGOS */
+
+
+.badge-js{
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+
+
+.badge-react{
+
+    right:40px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+}
+
+
+
+.badge-node{
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+
+
+.badge-mongo{
+
+    left:40px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+}
+
+
+
+.badge-figma{
+
+    top:10%;
+
+    left:15%;
+
+    transform:translateY(-50%)
+
+}
+
+
+
+/* ANIMATION ORBIT */
+
+
+@keyframes orbitRotate{
+
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+
+}
+
+
+
+/* GARDE LES LOGOS DROITS */
+
+
+@keyframes counterRotate{
+
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+
+    to{
+
+        transform:rotate(-360deg);
+
+    }
+
+}
