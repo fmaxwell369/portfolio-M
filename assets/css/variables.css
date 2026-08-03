@@ -1,0 +1,42 @@
+:root{
+
+    --primary:#F97316;
+    --primary-dark:#EA580C;
+
+    --background:#FAFAFA;
+    --surface:#FFFFFF;
+
+    --title:#111827;
+    --text:#6B7280;
+
+    --border:#E5E7EB;
+
+    /* TYPOGRAPHY */
+
+    --font-title:"Poppins",sans-serif;
+    --font-body:"Inter",sans-serif;
+
+    /* CONTAINER */
+
+    --container:1200px;
+
+    /* BORDER */
+
+    --radius-sm:8px;
+    --radius-md:16px;
+    --radius-lg:24px;
+    --radius-xl:999px;
+
+    /* SHADOW */
+
+    --shadow-sm:0 5px 20px rgba(0,0,0,.05);
+
+    --shadow-md:0 10px 35px rgba(0,0,0,.08);
+
+    --shadow-lg:0 20px 50px rgba(0,0,0,.12);
+
+    /* TRANSITION */
+
+    --transition:.35s ease;
+
+}
